@@ -117,7 +117,7 @@ then
 else
     mkdir src/rtl-sdr/build
 fi
-(cd src/rtl-sdr/build && cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON) 
+(cd src/rtl-sdr/build && cmake ../ -DCMAKE_INSTALL_PREFIX=/ciniki/sites/qruqsp.local/site/qruqsp-mods/pibin -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON) 
 make -C src/rtl-sdr/build
 cp src/rtl-sdr/build/src/rtl_* bin/
 
